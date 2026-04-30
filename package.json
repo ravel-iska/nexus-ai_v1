@@ -1,0 +1,46 @@
+{
+  "name": "nexus-agent",
+  "version": "3.0.0",
+  "description": "WA Agent Nexus v3.0 — AI Agent Ecosystem with GUI Dashboard",
+  "bin": {
+    "nexus-agent": "./bin/nexus.js"
+  },
+  "scripts": {
+    "bot": "node bin/nexus.js run",
+    "nexus": "node bin/nexus.js run",
+    "keygen": "node bin/nexus.js keygen",
+    "keys": "node bin/nexus.js keys",
+    "status": "node bin/nexus.js status",
+    "blueprint": "vite",
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "keywords": [
+    "ai",
+    "agent",
+    "whatsapp",
+    "nexus",
+    "llm",
+    "osint",
+    "crypto"
+  ],
+  "author": "Nexus Agent",
+  "license": "MIT",
+  "files": [
+    "bin",
+    "packages/wa-client/src",
+    "packages/gui-dashboard/dist"
+  ],
+  "devDependencies": {
+    "vite": "^6.4.2"
+  },
+  "dependencies": {
+    "@hapi/boom": "^10.0.1",
+    "@whiskeysockets/baileys": "^7.0.0-rc.9",
+    "axios": "^1.15.2",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "pino": "^10.3.1",
+    "qrcode": "^1.5.4"
+  }
+}

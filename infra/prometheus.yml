@@ -1,0 +1,30 @@
+# Prometheus configuration for Nexus v3.0
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+
+scrape_configs:
+  - job_name: 'nexus-api'
+    static_configs:
+      - targets: ['api-backend:8000']
+    metrics_path: /metrics
+
+  - job_name: 'nexus-wa-client'
+    static_configs:
+      - targets: ['wa-client:9100']
+
+  - job_name: 'nexus-celery'
+    static_configs:
+      - targets: ['celery-worker:9101']
+
+  - job_name: 'postgres'
+    static_configs:
+      - targets: ['postgres:5432']
+
+  - job_name: 'redis'
+    static_configs:
+      - targets: ['redis:6379']
+
+  - job_name: 'node-exporter'
+    static_configs:
+      - targets: ['node-exporter:9100']
